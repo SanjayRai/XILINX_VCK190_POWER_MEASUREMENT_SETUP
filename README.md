@@ -29,6 +29,7 @@ To Create  SD Bootable LInux using petaLinux:
  2. Copy BOOT.BIN, boot.scr and image.ub to the First Partition (FAT32).
  3. Extract rootfs.tar.gz to the seconf Partition (ext4)
       -ie,  tar -zxvf rootfs.tar.gz -C <mount_pont_of_Second_partition>
+  4. sync
 
 Running the design  on VCK190 and ,measuring power:
     Use the process outlined in the following confluence page:
