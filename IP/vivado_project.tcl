@@ -9,3 +9,8 @@ add_files -fileset sources_1 -norecurse {
 ../IP/vio_0v/vio_0v.xci
 ../IP/cips_ddr_pl_debug/cips_ddr_pl_debug.bd
 }
+
+proc regenrate_cips {} {
+    reset_target all [get_files  cips_ddr_pl_debug.bd]
+    generate_target all [get_files cips_ddr_pl_debug.bd]
+}
