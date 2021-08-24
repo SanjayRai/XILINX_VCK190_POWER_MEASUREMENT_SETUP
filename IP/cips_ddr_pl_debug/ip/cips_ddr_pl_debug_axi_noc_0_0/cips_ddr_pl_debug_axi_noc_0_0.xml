@@ -5309,7 +5309,11 @@
       <spirit:name>M00_AXI</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
-      <spirit:master/>
+      <spirit:master>
+        <spirit:addressSpaceRef spirit:addressSpaceRef="unknown">
+          <spirit:baseAddress spirit:format="long">0x020100000000</spirit:baseAddress>
+        </spirit:addressSpaceRef>
+      </spirit:master>
       <spirit:portMaps>
         <spirit:portMap>
           <spirit:logicalPort>
@@ -6007,7 +6011,11 @@
       <spirit:name>M01_AXI</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
-      <spirit:master/>
+      <spirit:master>
+        <spirit:addressSpaceRef spirit:addressSpaceRef="unknown">
+          <spirit:baseAddress spirit:format="long">0x020140000000</spirit:baseAddress>
+        </spirit:addressSpaceRef>
+      </spirit:master>
       <spirit:portMaps>
         <spirit:portMap>
           <spirit:logicalPort>
@@ -6705,7 +6713,11 @@
       <spirit:name>M02_AXI</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
-      <spirit:master/>
+      <spirit:master>
+        <spirit:addressSpaceRef spirit:addressSpaceRef="unknown">
+          <spirit:baseAddress spirit:format="long">0x0201C0000000</spirit:baseAddress>
+        </spirit:addressSpaceRef>
+      </spirit:master>
       <spirit:portMaps>
         <spirit:portMap>
           <spirit:logicalPort>
@@ -8310,7 +8322,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Aug 11 04:01:24 UTC 2021</spirit:value>
+            <spirit:value>Tue Aug 24 17:09:58 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -8342,7 +8354,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Aug 11 04:01:24 UTC 2021</spirit:value>
+            <spirit:value>Tue Aug 24 17:09:58 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -8392,7 +8404,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Aug 11 04:01:24 UTC 2021</spirit:value>
+            <spirit:value>Tue Aug 24 17:09:58 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -8412,7 +8424,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Aug 11 04:01:24 UTC 2021</spirit:value>
+            <spirit:value>Tue Aug 24 17:09:58 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>

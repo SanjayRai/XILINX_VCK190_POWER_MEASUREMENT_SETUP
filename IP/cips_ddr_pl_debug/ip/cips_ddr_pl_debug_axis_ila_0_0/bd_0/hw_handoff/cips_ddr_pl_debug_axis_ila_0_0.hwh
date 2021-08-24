@@ -1,62 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Aug 11 00:02:09 2021" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug 24 13:10:49 2021" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="versal" BOARD="xilinx.com:vck190:part0:2.2" DEVICE="xcvc1902" NAME="bd_76ec" PACKAGE="vsva2197" SPEEDGRADE="-2MP"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="99999900" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axis_ila_pp" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_ila_intf" PORT="ila_clk"/>
-        <CONNECTION INSTANCE="axis_dbg_sync_2" PORT="src_clk_in"/>
-        <CONNECTION INSTANCE="axis_dbg_sync_3" PORT="src_clk_in"/>
-        <CONNECTION INSTANCE="axis_dbg_sync_4" PORT="src_clk_in"/>
-        <CONNECTION INSTANCE="axis_dbg_sync_5" PORT="src_clk_in"/>
-        <CONNECTION INSTANCE="axis_dbg_sync_6" PORT="dest_clk_in"/>
-        <CONNECTION INSTANCE="axis_cap_ctrl" PORT="ila_clk"/>
-        <CONNECTION INSTANCE="axis_mu0_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu1_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu2_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu3_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu4_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu5_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu6_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu7_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu8_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu9_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu10_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu11_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu12_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu13_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu14_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu15_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu16_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu17_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu18_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu19_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu20_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu21_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu22_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu23_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu24_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu25_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu26_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu27_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu28_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu29_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu30_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu31_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu32_0" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mu33_0" PORT="clk"/>
-        <CONNECTION INSTANCE="tc_axis_mu0" PORT="clk"/>
-        <CONNECTION INSTANCE="cc_axis_mu0" PORT="clk"/>
-        <CONNECTION INSTANCE="cc_axis_mu1" PORT="clk"/>
-        <CONNECTION INSTANCE="cc_axis_mu2" PORT="clk"/>
-        <CONNECTION INSTANCE="cc_axis_mu3" PORT="clk"/>
-        <CONNECTION INSTANCE="axis_mem" PORT="clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="resetn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
     <PORT DIR="I" LEFT="63" NAME="SLOT_0_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SLOT_0_AXI_awaddr">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axis_ila_pp" PORT="probe0"/>
@@ -262,6 +209,59 @@
         <CONNECTION INSTANCE="axis_ila_pp" PORT="probe28"/>
       </CONNECTIONS>
     </PORT>
+    <PORT CLKFREQUENCY="99999900" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axis_ila_pp" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_ila_intf" PORT="ila_clk"/>
+        <CONNECTION INSTANCE="axis_dbg_sync_2" PORT="src_clk_in"/>
+        <CONNECTION INSTANCE="axis_dbg_sync_3" PORT="src_clk_in"/>
+        <CONNECTION INSTANCE="axis_dbg_sync_4" PORT="src_clk_in"/>
+        <CONNECTION INSTANCE="axis_dbg_sync_5" PORT="src_clk_in"/>
+        <CONNECTION INSTANCE="axis_dbg_sync_6" PORT="dest_clk_in"/>
+        <CONNECTION INSTANCE="axis_cap_ctrl" PORT="ila_clk"/>
+        <CONNECTION INSTANCE="axis_mu0_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu1_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu2_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu3_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu4_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu5_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu6_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu7_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu8_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu9_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu10_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu11_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu12_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu13_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu14_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu15_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu16_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu17_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu18_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu19_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu20_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu21_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu22_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu23_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu24_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu25_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu26_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu27_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu28_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu29_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu30_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu31_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu32_0" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mu33_0" PORT="clk"/>
+        <CONNECTION INSTANCE="tc_axis_mu0" PORT="clk"/>
+        <CONNECTION INSTANCE="cc_axis_mu0" PORT="clk"/>
+        <CONNECTION INSTANCE="cc_axis_mu1" PORT="clk"/>
+        <CONNECTION INSTANCE="cc_axis_mu2" PORT="clk"/>
+        <CONNECTION INSTANCE="cc_axis_mu3" PORT="clk"/>
+        <CONNECTION INSTANCE="axis_mem" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="resetn" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>

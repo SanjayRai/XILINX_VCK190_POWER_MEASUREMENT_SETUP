@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-//Date        : Wed Aug 11 00:01:23 2021
+//Date        : Tue Aug 24 13:09:56 2021
 //Host        : mcxlnx running 64-bit CentOS Linux release 7.7.1908 (Core)
 //Command     : generate_target cips_ddr_pl_debug.bd
 //Design      : cips_ddr_pl_debug

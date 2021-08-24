@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Aug 11 00:02:17 2021" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug 24 13:11:01 2021" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="versal" BOARD="xilinx.com:vck190:part0:2.2" DEVICE="xcvc1902" NAME="bd_ccac" PACKAGE="vsva2197" SPEEDGRADE="-2MP"/>
 
