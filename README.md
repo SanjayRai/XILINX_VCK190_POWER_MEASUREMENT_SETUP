@@ -10,7 +10,7 @@ To Build with Vivado 2021.1 :
 THis will build the  test design and write the vck190_test_top.xsa file
 
 To Create  SD Bootable LInux using petaLinux:
-
+> scl enable devtoolset-9 bash 
 > cd PLNX
 > ./plnx_bld
 
