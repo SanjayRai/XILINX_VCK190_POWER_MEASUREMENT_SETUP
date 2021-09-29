@@ -36,3 +36,6 @@ Running the design  on VCK190 and ,measuring power:
     https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/973078551/BEAM+Tool+for+VCK190+Evaluation+Kit
 
 
+Enabling  Bus Mastering :
+> setpci -s <BDF> 4.b=7
+ Eg. setpci -s 1:0.0  4.b=7
