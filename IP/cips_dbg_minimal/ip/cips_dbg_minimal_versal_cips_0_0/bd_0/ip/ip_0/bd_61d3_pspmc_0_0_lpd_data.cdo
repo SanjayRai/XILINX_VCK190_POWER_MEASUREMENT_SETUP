@@ -1,0 +1,281 @@
+version 2.0
+# UNLOCKING SLCR
+# LPD IOU SLCR Write protection register for IO Mux logic
+mask_write 0xff080728 0x1 0
+# MIO
+# Configures MIO Pin 0 peripheral interface mapping
+mask_write 0xff080000 0x3fe 0x4
+# Configures MIO Pin 1 peripheral interface mapping
+mask_write 0xff080004 0x3fe 0x4
+# Configures MIO Pin 2 peripheral interface mapping
+mask_write 0xff080008 0x3fe 0x4
+# Configures MIO Pin 3 peripheral interface mapping
+mask_write 0xff08000c 0x3fe 0x4
+# Configures MIO Pin 4 peripheral interface mapping
+mask_write 0xff080010 0x3fe 0x4
+# Configures MIO Pin 5 peripheral interface mapping
+mask_write 0xff080014 0x3fe 0x4
+# Configures MIO Pin 6 peripheral interface mapping
+mask_write 0xff080018 0x3fe 0x4
+# Configures MIO Pin 7 peripheral interface mapping
+mask_write 0xff08001c 0x3fe 0x4
+# Configures MIO Pin 8 peripheral interface mapping
+mask_write 0xff080020 0x3fe 0x4
+# Configures MIO Pin 9 peripheral interface mapping
+mask_write 0xff080024 0x3fe 0x4
+# Configures MIO Pin 10 peripheral interface mapping
+mask_write 0xff080028 0x3fe 0x4
+# Configures MIO Pin 11 peripheral interface mapping
+mask_write 0xff08002c 0x3fe 0x4
+# Configures MIO Pin 12 peripheral interface mapping
+mask_write 0xff080030 0x3fe 0x4
+# Configures MIO Pin 13 peripheral interface mapping
+mask_write 0xff080034 0x3fe 0x4
+# Configures MIO Pin 14 peripheral interface mapping
+mask_write 0xff080038 0x3fe 0x4
+# Configures MIO Pin 15 peripheral interface mapping
+mask_write 0xff08003c 0x3fe 0x4
+# Configures MIO Pin 16 peripheral interface mapping
+mask_write 0xff080040 0x3fe 0x4
+# Configures MIO Pin 17 peripheral interface mapping
+mask_write 0xff080044 0x3fe 0x4
+# Configures MIO Pin 18 peripheral interface mapping
+mask_write 0xff080048 0x3fe 0x4
+# Configures MIO Pin 19 peripheral interface mapping
+mask_write 0xff08004c 0x3fe 0x4
+# Configures MIO Pin 20 peripheral interface mapping
+mask_write 0xff080050 0x3fe 0x4
+# Configures MIO Pin 21 peripheral interface mapping
+mask_write 0xff080054 0x3fe 0x4
+# Configures MIO Pin 22 peripheral interface mapping
+mask_write 0xff080058 0x3fe 0x4
+# Configures MIO Pin 23 peripheral interface mapping
+mask_write 0xff08005c 0x3fe 0x4
+# Configures MIO Pin 24 peripheral interface mapping
+mask_write 0xff080060 0x3fe 0x280
+# Configures MIO Pin 25 peripheral interface mapping
+mask_write 0xff080064 0x3fe 0x280
+# bnk2_en_wk_pu
+mask_write 0xff080114 0x3ffffff 0x3d7fd7f
+# bnk2_en_wk_pd
+mask_write 0xff080110 0x3ffffff 0
+# bnk2_sel_slew
+mask_write 0xff080120 0x3ffffff 0
+# bnk2_sel_drv0
+mask_write 0xff080118 0xffffffff 0xaaaaaaaa
+# bnk2_sel_drv1
+mask_write 0xff08011c 0xfffff 0xaaaaa
+# bnk2_en_rx_schmitt_hyst
+mask_write 0xff08010c 0x3ffffff 0x103f03f
+# MIO pin Tri-state Enables, 31:0
+mask_write 0xff080204 0x3ffffff 0xfc0fc0
+# Select the PS MIO or PMC MIO
+mask_write 0xff080410 0xa407 0x7
+# LOCKING SLCR
+# LPD IOU SLCR Write protection register for IO Mux logic
+mask_write 0xff080728 0x1 0x1
+# RPLL INIT
+# Helper data. Values are to be looked up in a table from Data Sheet
+mask_write 0xff5e0044 0xfe7fedef 0x7e4b0c62
+# UPDATE FB_DIV
+# PLL Basic Control
+mask_write 0xff5e0040 0x73ff00 0x16300
+# BY PASS PLL
+# PLL Basic Control
+mask_write 0xff5e0040 0x8 0x8
+# ASSERT RESET
+# PLL Basic Control
+mask_write 0xff5e0040 0x1 0x1
+# CLEAR ERROR STATUS AFTER RESET
+# PSM Error Status Register. If any of the bits in this register is 1, it could generate any of the following events: (1) PSM Correctable error routed to PMC Error Handling, (2) PSM Non-Correctable error routed to PMC Error Handling, (3) IRQ to PSM MB, (4) PS SRST. Writing a 1 to any bit will clear the request. The register is only reset by the Power-on Reset and maintains its state through a System Reset.
+mask_write 0xffc91000 0x8000 0
+# DEASSERT RESET
+# PLL Basic Control
+mask_write 0xff5e0040 0x1 0
+# CHECK PLL STATUS
+mask_poll 0xff5e0050 0x1 0x1 0x1000
+# REMOVE PLL BY PASS
+# PLL Basic Control
+mask_write 0xff5e0040 0x8 0
+# Control for a clock that will be generated in the LPD, but used in the FPD or PMC as a clock source for the peripheral clock muxes.
+mask_write 0xff5e0100 0x3ff00 0x200
+# PS-PL SLAVE INTERFACE
+# Read Channel Control Register
+mask_write 0xff9b0000 0x3 0
+# Write Channel Control Register
+mask_write 0xff9b0014 0x3 0
+# afi fs SLCR control register. Do not change the bits durin
+mask_write 0xff419000 0x300 0x200
+# LPD CLOCK CONTROL REGISTER
+# This register controls this reference clock
+mask_write 0xff5e015c 0x203ff07 0x2000201
+# This register controls this reference clock
+mask_write 0xff5e0104 0x603ff07 0x6000200
+# This register controls this reference clock
+mask_write 0xff5e0108 0x203ff07 0x2000b01
+# This register controls this reference clock
+mask_write 0xff5e010c 0x1e03ff07 0x1e000200
+# This register controls this reference clock
+mask_write 0xff5e0114 0x203ff07 0x2000403
+# This register controls this reference clock
+mask_write 0xff5e0118 0xe03ff07 0xe000803
+# This register controls this reference clock
+mask_write 0xff5e011c 0xe03ff07 0xe000803
+# This register controls this reference clock
+mask_write 0xff5e0120 0x203ff07 0x2000403
+# This register controls this reference clock
+mask_write 0xff5e0124 0x203ff07 0x2003203
+# This register controls this reference clock
+mask_write 0xff5e0128 0x203ff07 0x2000a03
+# This register controls this reference clock
+mask_write 0xff5e013c 0x203ff07 0x2000a03
+# This register controls this reference clock
+mask_write 0xff5e0144 0x203ff07 0x2000a03
+# This register controls this reference clock
+mask_write 0xff5e0148 0x203ff07 0x2000300
+# This register controls this reference clock
+mask_write 0xff5e0158 0x203ff07 0x2000300
+# This register controls this reference clock
+mask_write 0xff5e014c 0x203ff07 0x2000a03
+# This register controls this reference clock
+mask_write 0xff5e0154 0x3ff07 0x300
+# LPD_SYSMON_SAT
+# UNLOCK LPD SYSMON
+# NPI Lock Register
+write 0xffb8000c 0xf9e8d7c6
+# SYSMON LPD SATELLITE BASE CONFIGURATION
+# DMA WRITE 1
+write 0xffb80100 0xff
+write 0xffb80104 0x1f1d77
+write 0xffb80108 0xf
+write 0xffb8010c 0x2128
+write 0xffb80110 0x2
+write 0xffb80114 0x1
+write 0xffb80124 0xdcdc2321 0x2de 0 0 0x60524 0x60 0x1bd6446 0x10624d 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# DMA WRITE 2
+write 0xffb80188 0
+write 0xffb8018c 0
+write 0xffb80190 0
+write 0xffb80194 0
+write 0xffb80198 0
+write 0xffb8019c 0
+write 0xffb801a0 0
+write 0xffb80500 0 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0xffffffff 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0x28000000 0 0 0
+write 0xffb8011c 0xfc4
+write 0xffb80120 0xfc
+write 0xffb80118 0x4f
+# LPD SATELLITE PCSR END SEQUENCE
+# GATEREG DEASSERT
+# Programming Mask Register
+write 0xffb80000 0x2
+# Programming Control Register
+write 0xffb80004 0
+# INITSTATE DEASSERT
+# Programming Mask Register
+write 0xffb80000 0x40
+# Programming Control Register
+write 0xffb80004 0
+# HOLDSTATE DE-ASSERTED AND PCOMPLETE ASSERTED IN AMS SATELLITES.
+# Programming Mask Register
+write 0xffb80000 0x81
+# Programming Control Register
+write 0xffb80004 0x1
+# LOCK LPD SYSMON SAT
+# NPI Lock Register
+write 0xffb8000c 0x1
+# CLEAR LPD SSC BYPASS
+# UNLOCK PMC SYSMON
+# NPI Lock Register
+write 0xf127000c 0xf9e8d7c6
+# Description
+mask_write 0xf1270104 0x80000 0
+# LOCK PMC SYSMON
+# NPI Lock Register
+write 0xf127000c 0x1
+# LPD PERIPHERAL RESET RELESE
+# GEM0 RESET RELESE
+# Reset for Individual block
+mask_write 0xff5e0308 0x1 0
+# GEM1 RESET RELESE
+# Reset for Individual block
+mask_write 0xff5e030c 0x1 0
+# USB RESET RELESE
+# Reset for Individual block
+mask_write 0xff5e0314 0x1 0
+# UART0 RESET RELESE
+# Reset for Individual block
+mask_write 0xff5e0318 0x1 0
+# CAN1 RESET RELESE
+# Reset for Individual block
+mask_write 0xff5e032c 0x1 0
+# I2C1 RESET RELESE
+# Reset for Individual block
+mask_write 0xff5e0334 0x1 0
+# TIMESTAMP RESET RELEASE
+# Reset for Individual block
+mask_write 0xff5e0348 0x1 0
+# RESET BLOCKS
+# Reset for Individual block
+mask_write 0xff5e0304 0x1 0
+# Reset for Individual block
+mask_write 0xff5e033c 0x1 0
+# Reset for Individual block
+mask_write 0xff5e0350 0x1 0
+# Reset for Individual block
+mask_write 0xff5e0354 0x1 0
+# RELEASE LPD DEBUG RESETS
+# Reset for Individual block
+mask_write 0xff5e0338 0x33 0
+# UART BAUD RATE
+# UART0 BAUD RATE
+# Integer Baud Rate Register
+mask_write 0xff000024 0xffff 0x36
+# Fractional Baud Rate Register
+mask_write 0xff000028 0x3f 0x10
+# UART0 CONFIG
+# Control Register
+mask_write 0xff000030 0x301 0x301
+# LPD PERIPHERAL RESET RELESE
+# LPD MUX/DEMUX FOR HSDP
+# AURORA INV POLARITY AND POLARITY CHECK
+# Aurora control register
+mask_write 0xff9c0008 0x3000 0x1000
+# LPD ADMA CHANNEL TRUST ZONE SETTINGS
+# ADMA0 TrustZone settings
+mask_write 0xff510060 0x1 0x1
+# ADMA1 TrustZone settings
+mask_write 0xff510064 0x1 0x1
+# ADMA2 TrustZone settings
+mask_write 0xff510068 0x1 0x1
+# ADMA3 TrustZone settings
+mask_write 0xff51006c 0x1 0x1
+# ADMA4 TrustZone settings
+mask_write 0xff510070 0x1 0x1
+# ADMA5 TrustZone settings
+mask_write 0xff510074 0x1 0x1
+# ADMA6 TrustZone settings
+mask_write 0xff510078 0x1 0x1
+# ADMA7 TrustZone settings
+mask_write 0xff51007c 0x1 0x1
+# COHERENCY LPD PERIPHERALS
+# PASS AXIT PROT FROM PL
+# TIMESTAMP BASE ENABLE
+# Program this register to match the clock frequency of the timestamp generator, in ticks per second. For example, for a 50 MHz clock, program 0x02FAF080. This register is not accessible to the read-only programming interface.
+mask_write 0xff140020 0xffffffff 0x5f5e0a0
+# Controls the counter increments. This register is not accessible to the read-only programming interface.
+mask_write 0xff140000 0x1 0x1
+# GEM TSU EXTERNAL CLOCK
+# GPIO PROGRAMMING
+# DIR MODE BANK 2
+# Direction mode (GPIO Bank0, MIO)
+mask_write 0xff0b0204 0x3ffffff 0
+# OUTPUT ENABLE BANK 2
+# Output enable (GPIO Bank0, MIO)
+mask_write 0xff0b0208 0x3ffffff 0
+# MASK_DATA_1_LSW HIGH BANK [67:52]
+# Maskable Output Data (GPIO Bank0, MIO, Lower 16bits)
+mask_write 0xff0b0000 0xffffffff 0xffff0000
+# MASK_DATA_1_LSW HIGH BANK [77:68]
+# Maskable Output Data (GPIO Bank0, MIO, Upper 10bits)
+mask_write 0xff0b0004 0x3ff03ff 0x3ff0000
+# PCIE RESET

@@ -8,6 +8,7 @@ add_files -fileset sources_1 -norecurse {
 ../IP/clk_wiz_0v/clk_wiz_0v.xci
 ../IP/vio_0v/vio_0v.xci
 ../IP/cips_ddr_pl_debug/cips_ddr_pl_debug.bd
+../IP/cips_dbg_minimal/cips_dbg_minimal.bd
 }
 
 proc regenrate_cips {} {

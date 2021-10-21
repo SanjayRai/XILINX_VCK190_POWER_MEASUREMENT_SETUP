@@ -1,0 +1,2 @@
+//Uncomment for NULL_BITSTREAM_DESIGN
+`define NULL_BITSTREAM_DESIGN

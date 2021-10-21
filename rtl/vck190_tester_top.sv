@@ -1,6 +1,8 @@
 `timescale 1 ps / 1 ps
+`include "vck190_tester_parameters.vh"
+
 module vck190_tester_top (
-  output [3:0] USER_LED,
+`ifndef NULL_BITSTREAM_DESIGN
   output ddr4_dimm1_act_n,
   output [16:0]ddr4_dimm1_adr,
   output [1:0]ddr4_dimm1_ba,
@@ -16,10 +18,16 @@ module vck190_tester_top (
   output ddr4_dimm1_odt,
   output ddr4_dimm1_reset_n,
   input ddr4_dimm1_sma_clk_clk_n,
-  input ddr4_dimm1_sma_clk_clk_p
+  input ddr4_dimm1_sma_clk_clk_p,
+`endif
+  output [3:0] USER_LED
 );
 
 
+`ifdef NULL_BITSTREAM_DESIGN
+assign USER_LED = 4'd0;
+cips_dbg_minimal cips_dbg_minimal_i ();
+`else
 wire CIPS_CLOCK_OUT_100M;
 wire [3:0] pl_LED;
 wire [3:0] gpio_led_out;
@@ -52,4 +60,5 @@ top_log u_power_consumer_top (
 	.USER_LED(pl_LED)
 );
 
+`endif
 endmodule

@@ -1,0 +1,15 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.98",
+   "Default View_TopLeft":"-406,-393",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace inst versal_cips_0 -pg 1 -lvl 1 -x 200 -y -140 -defaultsOSRD
+levelinfo -pg 1 -80 200 480
+pagesize -pg 1 -db -bbox -sgen -80 -200 480 120
+"
+}
+{
+   "da_cips_cnt":"1"
+}

@@ -6,8 +6,10 @@ set_property board_part xilinx.com:vck190:part0:2.2 [current_project]
 
 add_files -fileset sources_1 -norecurse {
 ../IP/cips_ddr_pl_debug/cips_ddr_pl_debug.bd
+../IP/cips_dbg_minimal/cips_dbg_minimal.bd
 ../IP/clk_wiz_0v/clk_wiz_0v.xci
 ../IP/vio_0v/vio_0v.xci
+../rtl/vck190_tester_parameters.vh
 ../rtl/block_ram_daisy_chain_v2.v
 ../rtl/clk_gen.v
 ../rtl/dsp.v
@@ -18,6 +20,7 @@ add_files -fileset sources_1 -norecurse {
 }
 add_files -fileset constrs_1 -norecurse ../xdc/top.xdc
 
+set_property top vck190_tester_top [current_fileset]
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
 launch_runs impl_1 -jobs 8
