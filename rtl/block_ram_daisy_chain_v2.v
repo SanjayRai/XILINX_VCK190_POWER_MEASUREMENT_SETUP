@@ -16,26 +16,27 @@ module block_ram_daisy_chain # (
     );
 
 
-reg 	[35:0]			rd_data;
+reg 	[35:0]			rd_data = 0;
 wire 	[((NUM_RAMB_36+1)*36)-1:0]	wr_data;
 reg 	[35:0]			rd_data_init=36'hbcbc_bcbc_b;
 
 
-reg 	[9:0] 			wr_addr, rd_addr;
+reg 	[9:0] 			wr_addr= 0;
+reg 	[9:0] 			rd_addr = 0;
 
 
 
-reg				rst;
+reg				rst = 0;
 
-reg 				ram_en;
-reg 				ram_wr_en;
-reg 				ram_rd_en;
-reg                en_b;
+reg 				ram_en = 0;
+reg 				ram_wr_en = 0;
+reg 				ram_rd_en = 0;
+reg                en_b = 0;
 wire    [((NUM_RAMB_36+1)*10)-1:0]   rd_addr_dc;
 wire	[NUM_RAMB_36:0]	ram_en_dc;
 wire	[NUM_RAMB_36:0]	ram_rd_en_dc;
 wire	[NUM_RAMB_36:0]	ram_wr_en_dc;
-reg	[6:0]				mask_count;
+reg	[6:0]				mask_count = 0;
 
 
 always @ (posedge clk)
@@ -163,16 +164,23 @@ module ramb36_sp_daisy_chain (
 	input	wire	[9:0]	rd_addr,
 	input	wire	[9:0]	wr_addr,
 	input 	wire	[35:0]	rd_data,
-	output 	reg	    [35:0]	wr_data,
-	output reg     [9:0]   rd_addr_dc,
-    output 	reg		ram_en_dc,
-    output 	reg		ram_rd_en_dc,
-    output 	reg		ram_wr_en_dc
+	output 	reg	    [35:0]	wr_data = 0,
+	output reg     [9:0]   rd_addr_dc = 0,
+    output 	reg		ram_en_dc = 0,
+    output 	reg		ram_rd_en_dc = 0,
+    output 	reg		ram_wr_en_dc = 0
 
 	);
 
 reg	[35:0]	wr_data_int=36'hacac_acac_a;;
 reg 	[35:0]	memory [1023:0];
+
+integer i;
+initial begin
+    for (i=0; i < 1024; i=i+1) begin
+        memory[i] = 36'd0;
+    end
+end
 
 always @ (posedge clk)
     begin

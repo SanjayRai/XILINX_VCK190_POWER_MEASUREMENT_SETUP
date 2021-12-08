@@ -15,18 +15,18 @@ module  dsp # (
     );
 
 
-reg	 [6:0]				mask_count;
+reg	 [6:0]				mask_count = 0;
 
 
 reg                             disable_logic=0;
 //wire dsp_o;
 wire            dsp_ce;
-reg  	signed[17:0]	ain;
-reg  	signed[17:0]	bin;
-reg  	signed[17:0]	din;
-(* DONT_TOUCH = "TRUE" *)reg    signed[47:0]    dsp_out;
+reg  	signed[17:0]	ain = 0;
+reg  	signed[17:0]	bin = 0;
+reg  	signed[17:0]	din = 0;
+(* DONT_TOUCH = "TRUE" *)reg    signed[47:0]    dsp_out = 0;
 
-reg  	signed[(NUM_DSP_BLOCK+1)*48-1:0]	cin;
+reg  	signed[(NUM_DSP_BLOCK+1)*48-1:0]	cin = 0;
 wire  	signed[(NUM_DSP_BLOCK+1)*48-1:0]	dout;
 wire  	signed[(NUM_DSP_BLOCK+1)*18-1:0]	acout;
 wire  	signed[(NUM_DSP_BLOCK+1)*18-1:0]	bcout;
@@ -91,7 +91,7 @@ dsp_out <= 48'h0000_0000_0000;
 else
 dsp_out <= dout[(NUM_DSP_BLOCK+1)*48-1:NUM_DSP_BLOCK*48];
 
-assign dsp_o = dsp_out[0];
+assign dsp_o = ^dsp_out;
 
 	basic_block_dsp ubasic_block_dsp (
 		.clk(clk),

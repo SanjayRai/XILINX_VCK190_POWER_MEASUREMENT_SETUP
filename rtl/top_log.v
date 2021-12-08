@@ -40,7 +40,7 @@ wire link_down_latched_out = 1;
 reg [1:0] count;
 wire dclk_out;
 wire ram_o;
-wire ram_en;
+//wire ram_en;
 wire logic_o_A;
 wire logic_o_B;
 (* mark_debug = "true" *)wire [2:0] clk_sel;
@@ -187,12 +187,19 @@ assign clk_mux_o = clk_in;
 //               
 //                  // End of BUFGMUX_inst instantiation
 	
-vio_0v vio_0_ins(
-.clk(clk_mux_o),
-.probe_in0({GPIO_LED_0,data_o}),
-.probe_out0({rst_out,clk_sel}),
-.probe_out1({toggle_rate})
-);
+`ifdef SIMULATION_ONLY
+    assign rst_out = 1'b0;
+    assign clk_sel = 1'b0;
+    assign toggle_rate = 7'b1111111;
+
+`else
+    vio_0v vio_0_ins(
+    .clk(clk_mux_o),
+    .probe_in0({GPIO_LED_0,data_o}),
+    .probe_out0({rst_out,clk_sel}),
+    .probe_out1({toggle_rate})
+    );
+`endif
 
 endmodule
 

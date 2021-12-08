@@ -1,4 +1,5 @@
-//`define SIM
+`include "vck190_tester_parameters.vh"
+
 module  logic_slr #(
     parameter NUM_LOGIC_BLOCK 	= 2,
    // parameter TOGGLE_RATE = 100,
@@ -145,7 +146,7 @@ end
 //module shift_registers_0 (clk, clken, SI, SO);
 
 
-reg[WIDTH-1:0] shreg;
+reg[WIDTH-1:0] shreg = 0;
 integer i;
 always @(posedge clk)
 begin
